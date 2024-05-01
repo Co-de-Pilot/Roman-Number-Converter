@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROMAN NUMBER CONVERTER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/roman_converter_style.css" />
+  </head>
+  <body>
+    <h1 class="text-shadow-red">ROMAN NUMBER CONVERTER</h1>
+    <section>
+      <form action="#" method="post" class="js-form">
+        <fieldset class="box-shadow-red">
+          <legend class="box-shadow-red text-shadow-red">Number input</legend>
+          <label
+            >Arabic number:
+            <input
+              type="number"
+              name="arabic-number"
+              min="1"
+              step="1"
+              id="arabic-number"
+              placeholder="Arabic number"
+              class="box-shadow-red text-shadow-red"
+            />
+          </label>
+          <label
+            >Roman number:
+            <input
+              type="text"
+              name="roman-number"
+              step="0.1"
+              id="roman-number"
+              placeholder="Roman number"
+              pattern="^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"
+              class="box-shadow-red text-shadow-red"
+            />
+          </label>
+          <button class="box-shadow-red text-shadow-red convert">
+            CONVERT
+          </button>
+        </fieldset>
+        <fieldset class="box-shadow-red">
+          <legend class="box-shadow-red text-shadow-red">RESULT</legend>
+          <input
+            type="text"
+            id="result"
+            class="box-shadow-red text-shadow-red long"
+          />
+          <button class="box-shadow-red text-shadow-red clipboard">
+            COPY TO CLIPBOARD
+          </button>
+        </fieldset>
+        <!--         <fieldset class="box-shadow-red">
+          <legend class="box-shadow-red text-shadow-red">Napló</legend>
+          <div id="history"></div>
+          <input type="text" id="result" size="81" />
+        </fieldset> -->
+      </form>
+    </section>
+    <script src="./roman_converter.js"></script>
+  </body>
+</html>
