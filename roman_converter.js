@@ -80,7 +80,7 @@ convertButton.addEventListener("click", () => {
   } else if (romanField.value != "") {
     resultField.value = romanToInt(romanField.value);
   } else {
-    resultField.value = "Kérlek adj meg egy konvertálható értéket!";
+    resultField.value = "Please enter a valid input!";
   }
 });
 
