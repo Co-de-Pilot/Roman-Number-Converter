@@ -4,10 +4,6 @@
 :root {
   --color-red: rgba(180, 0, 0, 1);
   --color-white: rgba(255, 255, 255, 0.8);
-  --color-white-transparent: rgba(255, 255, 255, 0.5);
-  --color-transparent: rgba(255, 255, 255, 0);
-  --color-background: rgba(80, 0, 0, 0.05);
-  --color-dark-background: rgba(3, 3, 11, 1);
 }
 
 /* ----------------------------- */
