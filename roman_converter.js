@@ -75,9 +75,9 @@ romanField.addEventListener("change", () => {
 });
 
 convertButton.addEventListener("click", () => {
-  if (arabicField.value != "") {
+  if (arabicField.reportValidity() && arabicField.value != "") {
     resultField.value = intToRoman(Number.parseInt(arabicField.value));
-  } else if (romanField.value != "") {
+  } else if (romanField.reportValidity() && romanField.value != "") {
     resultField.value = romanToInt(romanField.value);
   } else {
     resultField.value = "Please enter a valid input!";
