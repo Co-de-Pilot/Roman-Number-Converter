@@ -3,7 +3,7 @@
 /* ----------------------------- */
 :root {
   --color-red: rgba(180, 0, 0, 1);
-  --color-white: rgba(255, 255, 255, 0.8);
+  --color-black: rgba(11, 11, 11, 0.8);
 }
 
 /* ----------------------------- */
@@ -74,8 +74,8 @@ fieldset {
   backdrop-filter: blur(2px);
   & legend {
     font-size: 1.5rem;
-    text-shadow: 0 0 3px var(--color-white);
-    color: var(--color-white);
+    text-shadow: 0 0 3px var(--color-black);
+    color: var(--color-black);
     background-color: var(--color-red);
     padding: 0.3rem 1rem;
     border-radius: 8px;
@@ -100,14 +100,15 @@ input {
   outline: 0;
   &::placeholder {
     color: var(--color-red);
+    font-size: 1.1rem;
   }
   &:focus {
-    color: var(--color-white);
-    text-shadow: 0 0 2px var(--color-white);
-    border: 2px solid var(--color-white);
-    box-shadow: 0 0 3px 1px var(--color-white);
+    color: var(--color-black);
+    text-shadow: 0 0 2px var(--color-black);
+    border: 2px solid var(--color-black);
+    box-shadow: 0 0 3px 1px var(--color-black);
     &::placeholder {
-      color: var(--color-white);
+      color: var(--color-black);
     }
   }
   &.long {
@@ -127,9 +128,9 @@ button {
   transition: all 0.5s;
   &:hover,
   &:focus {
-    color: var(--color-white);
-    text-shadow: 0 0 2px var(--color-white);
-    border: 2px solid var(--color-white);
-    box-shadow: 0 0 3px 1px var(--color-white);
+    color: var(--color-black);
+    text-shadow: 0 0 2px var(--color-black);
+    border: 2px solid var(--color-black);
+    box-shadow: 0 0 3px 1px var(--color-black);
   }
 }

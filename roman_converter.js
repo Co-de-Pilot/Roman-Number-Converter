@@ -26,7 +26,7 @@ let intToRoman = function (number) {
   return roman;
 };
 
-var romanToInt = function (s) {
+let romanToInt = function (s) {
   let convertRoman = {
     I: 1,
     V: 5,
@@ -53,27 +53,42 @@ function negativSetter(i, array) {
   return array[i];
 }
 
+/* ----------------------------------------------- */
+/* Az INPUT és BUTTON konstansok meghatározása     */
+/* ----------------------------------------------- */
 const arabicField = document.querySelector("#arabic-number");
 const romanField = document.querySelector("#roman-number");
 const resultField = document.querySelector("#result");
 const convertButton = document.querySelector(".convert");
 const clipboardButton = document.querySelector(".clipboard");
 
+/* ----------------------------------------------- */
+/* A FORM SUBMIT eseménykezelőjének beállítása     */
+/* ----------------------------------------------- */
 document.querySelector(".js-form").addEventListener("submit", formSubmit);
 function formSubmit(event) {
   event.preventDefault();
 }
 
-arabicField.addEventListener("change", () => {
-  arabicField.reportValidity();
+/* ----------------------------------------------- */
+/* Római szám input eseménykezelőjének beállítása  */
+/* ----------------------------------------------- */
+arabicField.addEventListener("keyup", () => {
+  arabicField.reportValidity(); //HTML Attribútum szerinti validáció ellenőrzés
   romanField.value = "";
 });
 
-romanField.addEventListener("change", () => {
-  romanField.reportValidity();
+/* ----------------------------------------------- */
+/* Római szám input eseménykezelőjének beállítása  */
+/* ----------------------------------------------- */
+romanField.addEventListener("keyup", () => {
+  romanField.reportValidity(); //HTML Attribútum szerinti validáció ellenőrzés
   arabicField.value = "";
 });
 
+/* ----------------------------------------------- */
+/* Konvertálás gomb eseménykezelőjének beállítása  */
+/* ----------------------------------------------- */
 convertButton.addEventListener("click", () => {
   if (arabicField.reportValidity() && arabicField.value != "") {
     resultField.value = intToRoman(Number.parseInt(arabicField.value));
@@ -84,6 +99,9 @@ convertButton.addEventListener("click", () => {
   }
 });
 
+/* ----------------------------------------------- */
+/* Vágólapra másolás beállítása                    */
+/* ----------------------------------------------- */
 clipboardButton.addEventListener("click", () => {
   navigator.clipboard.writeText(resultField.value);
 });
